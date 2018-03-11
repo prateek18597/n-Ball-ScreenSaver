@@ -1,0 +1,61 @@
+\documentclass[14pt]{extarticle}
+%\usepackage[a4paper,vmargin={20mm,20mm},hmargin={20mm,10mm}]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+
+\usepackage{lipsum}
+
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=4pt]
+    ($ (current page.north west) + (1cm,-1cm) $)
+    rectangle
+    ($ (current page.south east) + (-1cm,1cm) $);
+\draw[line width=1.5pt]
+    ($ (current page.north west) + (1.2cm,-1.2cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.2cm,1.2cm) $);
+\end{tikzpicture}
+}
+\usepackage{color}
+\author{\textbf{Vaibhav Vashisht} 2016CSJ0002  \\\textbf{Pratik Parmar} 2016CSJ0049}
+\title{\textbf{\textit{COP290: Design Practices}\\ \textit{Change Document} \\ \textit{n-Ball Screensaver}  }}
+\begin{document}
+
+%\end{document}
+%\trimFrame  
+%\settrimmedsize{210mm}{145mm}{*} 
+%\settrims{20mm}{34mm}
+\maketitle
+\newpage
+
+\begin{center}
+
+\section*{\texttt{n-Ball ScreenSaver}
+}
+\end{center}
+\section{\underline{Threads:}}
+%\begin{center}
+As mentioned in the design doc we have upgraded from barrier method to one to one communication between threads using mutex,each ball is controlled by a thread itself and checks its collsion with other balls,mutex is applied here.
+%\end{center}
+\section{\underline{GUI:}}
+%\begin{center}
+We have not added gui buttons as they made our screensaver look very dull instead we have keyboard options.We have also not added date,time and text box for changing complete velocity vector due to the same reasons.As cube is a static object we made it using a function call.
+%\end{center}
+\section{\underline{Mouse Input:}}
+%\begin{center}
+We have not added the feature for taking mouse input from user to select the ball instead we can select ball from keyboard as mouse selection was becoming complex.
+%\end{center}
+\section{\underline{Collision:}}
+%\begin{center}
+
+We have not divided the cube into 8 parts(as planned for efficient collision check) as the project was already working well without this even for large inputs.
+\section{\underline{Other:}}
+
+In design document we listed a feature that user will be able to change the position of ball we have not added that feature as it looked quite unnatural.Also we have kept the mass of the ball to be constant irrespective of the radius of the ball for simplicity.We have taken the coefficient of restitution=1 for all collisions. 
+
+
+
+
+\end{document}
