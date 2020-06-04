@@ -4,10 +4,12 @@ This is a n Ball 3D ScreenSaver where n is number between 1 and 99.
 
 ### System Requirement 
 
-Linux Based Operating System.
-G++ complier
-OpenGL GLUT library
-pthread Library
+1. Linux Based Operating System.
+2. G++ complier
+3. OpenGL GLUT library
+	1.1. sudo apt install freeglut
+	1.2. sudo apt-get install freeglut3-dev
+4. pthread Library
 
 ### Instructions
 

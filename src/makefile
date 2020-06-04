@@ -9,4 +9,7 @@ execute:
 	@./ScreenSaver $(num_thread)
 clean:
 	@rm -r ScreenSaver;
+install:
+	sudo apt install freeglut;
+	sudo apt-get install freeglut3-dev
 

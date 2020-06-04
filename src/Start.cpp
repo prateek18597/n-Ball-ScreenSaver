@@ -2,6 +2,7 @@
 using namespace std;
 #include <algorithm>
 #include<pthread.h>
+#include<random>
 #include "Start.h"
 #include "Threads.h"
 
@@ -83,15 +84,16 @@ void GenerateBalls()
 	rotateY=0;
 	rotateZ=0;
 	
-	std::random_device rnd;
-    std::mt19937 gen(rnd());
+    random_device rnd;
+    mt19937 gen(rnd());
 
-    std::uniform_real_distribution<> disr(0.2,0.5);		//Random Distribution of Velocity and positions of Balls.
-    std::uniform_real_distribution<> disy(-2.25+0.5,2.25-0.5);
-    std::uniform_real_distribution<> disx(-6,6);
-    std::uniform_real_distribution<> disz(-2.5,2.5);
-    std::uniform_real_distribution<> disv(-0.07,0.07);
+    uniform_real_distribution<> disr(0.2,0.5);		//Random Distribution of Velocity and positions of Balls.
+    uniform_real_distribution<> disy(-2.25+0.5,2.25-0.5);
+    uniform_real_distribution<> disx(-6,6);
+    uniform_real_distribution<> disz(-2.5,2.5);
+    uniform_real_distribution<> disv(-0.07,0.07);
     
+
     for(int i=1;i<=n;i++)
     {    
         b[i].set_x(disx(gen));
